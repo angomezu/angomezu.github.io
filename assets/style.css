@@ -29,6 +29,8 @@ body{
   position: sticky;
   top: 18px;
   align-self: start;
+  height: calc(100vh - 36px);
+  overflow: auto;
   padding-right: 18px;
 }
 
