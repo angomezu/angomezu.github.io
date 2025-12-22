@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angel A. Barrera Gomez</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <aside class="side">
+      <img class="photo" src="assets/angel.jpg" alt="Angel portrait" />
+      <h1>Angel A. Barrera Gomez</h1>
+      <p class="role">M.S. Data Science • 3D Perception • Embodied AI</p>
+
+      <div class="contact">
+        <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+        <div class="muted">Johnson City, TN, USA</div>
+      </div>
+
+      <nav class="nav">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="assets/cv.pdf">CV</a>
+        <a href="https://github.com/angomezu">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section id="research">
+        <h2>Research</h2>
+        <p>
+          I’m focused on perception and learning for embodied AI, with emphasis on 3D point clouds,
+          geometric deep learning, and data-centric evaluation. My recent work includes a 3D LiDAR
+          segmentation project in collaboration with Oak Ridge National Laboratory.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+
+        <div class="card">
+          <h3>3D LiDAR Plant Organ Segmentation (ORNL collaboration)</h3>
+          <p class="muted">Point cloud segmentation • geometric features • robust evaluation</p>
+          <ul>
+            <li>Built a geometric deep learning pipeline for organ segmentation.</li>
+            <li>Reported ~65.6% mIoU and ~82% stem recall (current best configuration).</li>
+          </ul>
+          <p><a href="projects/">Project page →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>Project #2 (add later)</h3>
+          <p class="muted">One sentence summary.</p>
+        </div>
+      </section>
+
+      <section id="updates">
+        <h2>Updates</h2>
+        <ul class="updates">
+          <li><span class="date">2025-12</span> Website launched.</li>
+          <li><span class="date">2026-01</span> Preparing ORNL project write-up for submission.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        © <span id="y"></span> Angel A. Barrera Gomez
+      </footer>
+    </main>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
