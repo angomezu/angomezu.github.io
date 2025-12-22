@@ -16,13 +16,14 @@ body{
 }
 
 .wrap{
-  max-width: var(--max);
+  max-width: 1180px; 
   margin: 0 auto;
-  padding: 28px 18px;
+  padding: 24px 16px;
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 44px;
+  grid-template-columns: 360px 1fr;
+  gap: 36px;                
 }
+
 
 .side{
   position: sticky;
