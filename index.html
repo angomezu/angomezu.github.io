@@ -14,13 +14,16 @@
       <p class="role">M.S. Data Science • 3D Perception • Embodied AI</p>
 
       <div class="contact">
-        <a href="mailto:YOUR_EMAIL">angomezu@gmail.com</a>
+        <a href="mailto:angomezu@gmail.com">angomezu@gmail.com</a>
         <div class="muted">Johnson City, TN, USA</div>
       </div>
 
       <nav class="nav">
+        <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#goals">Goals</a>
+        <a href="#updates">Updates</a>
         <a href="assets/Angel_Barrera_Resume.pdf">CV</a>
         <a href="https://github.com/angomezu">GitHub</a>
         <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a>
@@ -28,14 +31,45 @@
     </aside>
 
     <main class="main">
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I’m a data scientist and engineer with a research direction in <strong>perception and learning for embodied intelligence</strong>.
+          My core technical foundation is <strong>3D perception</strong> and <strong>geometric deep learning</strong>, where I work with real sensor data
+          (LiDAR point clouds, structured logs) to build systems that are robust, testable, and useful in practice.
+        </p>
+        <p>
+          I’m especially interested in how robots can learn reliable representations under <strong>partial observability</strong> (occlusion),
+          <strong>noise</strong>, and <strong>domain shift</strong>, and how those representations can later support data-efficient learning for manipulation
+          and human–robot collaboration. I have not yet worked directly on embodied AI policy learning, but my current work is intentionally building the
+          perception + evaluation foundation needed to transition there.
+        </p>
+      </section>
+
       <section id="research">
         <h2>Research</h2>
+
+        <p class="muted">
+          PhD identity: Researcher in perception and learning for embodied intelligence
+        </p>
+
         <p>
-          I focus on 3D perception and geometric deep learning, with an emphasis on learning from unstructured point clouds and designing robust evaluation pipelines. My work centers on extracting and leveraging geometric structure for semantic understanding in real-world 3D data.
-          
-          My most recent work involved the develop of a 3D LiDAR plant organ segmentation deep learning model in collaboration with Oak Ridge National Laboratory. I evaluated geometry-aware neural networks, engineered local geometric features, and designed data-centric evaluation protocols under class imbalance and occlusion.
-          
-          I am interested in extending geometric perception methods toward embodied AI and robotics settings, particularly where reliable 3D understanding is critical for downstream decision-making.
+          Building on my experience with <strong>3D point-cloud-based deep learning on real sensor data</strong>, I’m interested in
+          <strong>perception-driven robotic manipulation</strong>. In particular, I want to study how geometric 3D representations can be learned robustly
+          under partial observability and noise, and how these representations can support <strong>data-efficient learning</strong> and
+          <strong>human–robot interaction</strong> in real-world settings.
+        </p>
+
+        <ul>
+          <li><strong>Perception:</strong> learning action-relevant representations from point clouds; robustness under occlusion, noise, and domain shift; sensor fusion (RGB + depth + LiDAR).</li>
+          <li><strong>Learning in the real world:</strong> self-supervised perception; sim-to-real transfer; learning with partial/weak labels.</li>
+          <li><strong>Human–robot interaction:</strong> vision-based intent recognition; safe shared workspaces; multimodal perception (gesture + motion + scene).</li>
+          <li><strong>Embodied multimodal intelligence:</strong> grounding vision/language for robotics; policies conditioned on visual + semantic inputs.</li>
+        </ul>
+
+        <p>
+          <strong>Bridge experience:</strong> My ORNL work connects directly to these goals: geometry-aware perception from LiDAR point clouds,
+          handling real-world noise and imbalance, and building rigorous evaluation/uncertainty pipelines that matter for downstream action.
         </p>
       </section>
 
@@ -44,25 +78,85 @@
 
         <div class="card">
           <h3>3D LiDAR Plant Organ Segmentation (ORNL collaboration)</h3>
-          <p class="muted">Point cloud segmentation • geometric features • robust evaluation</p>
+          <p class="muted">Point cloud segmentation • geometric deep learning • robust evaluation</p>
           <ul>
-            <li>Built a geometric deep learning pipeline for organ segmentation.</li>
-            <li>Reported ~65.6% mIoU and ~82% stem recall (current best configuration).</li>
+            <li>Developed a geometry-aware deep learning pipeline for plant organ segmentation from 3D LiDAR point clouds.</li>
+            <li>Engineered local geometric descriptors and evaluated under class imbalance and partial observability (occlusion).</li>
+            <li>Current best configuration reports ~65.6% mIoU and ~82% stem recall.</li>
           </ul>
           <p><a href="projects/">Project page →</a></p>
         </div>
 
         <div class="card">
-          <h3>Project #2 (add later)</h3>
-          <p class="muted">One sentence summary.</p>
+          <h3>CRM → PostgreSQL ETL for Real Estate Analytics (Render + Power BI)</h3>
+          <p class="muted">Data engineering • event-driven ingestion • BI system design</p>
+          <ul>
+            <li>Built a cloud BI system that streams CRM events via Flask webhooks into PostgreSQL on Render.</li>
+            <li>Combined real-time ingestion with scheduled incremental API sync; maintained full event history for auditability.</li>
+            <li>Powered 8 interactive Power BI dashboards with a standardized DAX measure library (60+ measures) and optimized schema/indexing.</li>
+          </ul>
+          <p><a href="https://github.com/angomezu/CRM-to-PostgreSQL-ETL-for-Real-Estate-Analytics">Repository →</a></p>
         </div>
+
+        <div class="card">
+          <h3>EEG Motor Imagery Classification (Conv1D CNN)</h3>
+          <p class="muted">Signal processing • deep learning • generalization challenges</p>
+          <ul>
+            <li>Built a full pipeline to classify left vs. right fist motor imagery from PhysioNet EEG (20 subjects, 64 channels, 160 Hz).</li>
+            <li>Compared CSP-based baselines vs deep models; final 2-layer Conv1D CNN reached <strong>76.61% accuracy</strong> (ROC-AUC 0.79).</li>
+            <li>Analyzed subject-wise generalization (avg. accuracy 51.8%) and documented future work for domain adaptation and transfer learning.</li>
+          </ul>
+          <p><a href="https://github.com/angomezu/bci-motor-classification-cnn">Repository →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>Apex Capital: Financial + ESG Decision Support System (Power BI + Python + MySQL)</h3>
+          <p class="muted">ETL + data integrity • decision support • analytics engineering</p>
+          <ul>
+            <li>Built a full-stack prototype DSS for “dual-mandate” investing (value + ESG), merging multi-source financial and ESG datasets.</li>
+            <li>Implemented an ETL workflow with data quality discovery (e.g., mismatched tickers, missing ESG coverage) and schema-enforced loading into MySQL.</li>
+            <li>Delivered a Power BI “financial terminal” dashboard with context-aware DAX measures (sector benchmarking, investable gating, ESG null handling).</li>
+          </ul>
+          <p><a href="https://github.com/angomezu/Financial-Analytics-DSS">Repository →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>Predicting Hospital Readmission (Logistic Regression in R)</h3>
+          <p class="muted">Statistical modeling • interpretability • healthcare analytics</p>
+          <ul>
+            <li>Modeled hospital readmission risk on 25,000 patient records using logistic regression with stepwise AIC selection.</li>
+            <li>Achieved ~61.7% test accuracy (AUC 0.662) and identified key drivers (length of stay, prior visits, medication/labs, age).</li>
+          </ul>
+          <p><a href="https://github.com/angomezu/Predicting-Hospital-Readmission">Repository →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>PDF Charge Parser (Python GUI)</h3>
+          <p class="muted">Automation tool • PDF parsing • Excel reporting</p>
+          <ul>
+            <li>Built a lightweight desktop tool to parse telecom billing PDFs and extract roaming/long-distance charges into a clean Excel report.</li>
+            <li>Implemented robust parsing with PyMuPDF and rule-based extraction, wrapped in a simple Tkinter GUI with progress tracking.</li>
+          </ul>
+          <p><a href="https://github.com/angomezu/pdf_charge_parser">Repository →</a></p>
+        </div>
+      </section>
+
+      <section id="goals">
+        <h2>Goals</h2>
+        <ul>
+          <li><strong>Research direction:</strong> grow from geometry-aware 3D perception into embodied AI (perception → learning → action), with an emphasis on robustness and data efficiency.</li>
+          <li><strong>Near-term:</strong> turn the ORNL 3D LiDAR project into a formal research write-up and submission.</li>
+          <li><strong>Skill ramp:</strong> deepen PyTorch and modern CV tooling toward robotics-relevant perception (3D, multimodal fusion, self-supervised learning).</li>
+          <li><strong>Career:</strong> pursue roles and/or a PhD path aligned with perception for robotics and real-world intelligent systems.</li>
+        </ul>
       </section>
 
       <section id="updates">
         <h2>Updates</h2>
         <ul class="updates">
-          <li><span class="date">2025-12</span> Website launched.</li>
-          <li><span class="date">2026-01</span> Preparing ORNL project write-up for submission.</li>
+          <li><span class="date">2025-12</span> Personal site launched and project portfolio consolidated.</li>
+          <li><span class="date">2026-01</span> Preparing ORNL 3D LiDAR project write-up for submission.</li>
+          <li><span class="date">2026</span> Transitioning focus toward embodied AI: robust 3D perception → learning for manipulation/HRI.</li>
         </ul>
       </section>
 
