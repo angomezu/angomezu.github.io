@@ -41,6 +41,19 @@ body{
   object-fit: cover;
 }
 
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.img-grid img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
 h1{ font-size: 28px; margin: 0 0 6px; }
 .role{ margin: 0 0 14px; color: var(--muted); }
 
@@ -102,5 +115,7 @@ h2{
   .side{ position: static; padding-right: 0; }
   .photo{ max-width: 220px; }
   .nav{ flex-direction: row; flex-wrap: wrap; gap: 12px; }
+  .img-grid { grid-template-columns: 1fr; }
 }
+
 
