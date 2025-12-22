@@ -116,10 +116,13 @@ h2{
 
 @media (max-width: 900px){
   .wrap{ grid-template-columns: 1fr; gap: 22px; }
-  .side{ position: static; padding-right: 0; }
+  .side{
+    position: static;
+    padding-right: 0;
+    height: auto;
+    overflow: visible;
+  }
   .photo{ max-width: 220px; }
   .nav{ flex-direction: row; flex-wrap: wrap; gap: 12px; }
   .img-grid { grid-template-columns: 1fr; }
 }
-
-
