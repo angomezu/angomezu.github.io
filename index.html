@@ -66,28 +66,50 @@
 
       <section id="research">
         <h2>Research</h2>
-
-        <p class="muted">
-          PhD identity: Researcher in perception and learning for embodied intelligence
-        </p>
-
+      
+        <p><strong>PhD identity:</strong> Researcher in compositional visual perception and data-efficient learning</p>
+      
         <p>
-          Building on my experience with 3D point-cloud-based deep learning on real sensor data, I’m interested in
-          perception-driven robotic manipulation. In particular, I want to study how geometric 3D representations can be learned robustly
-          under partial observability and noise, and how these representations can support data-efficient learning and
-        human–robot interaction in real-world settings.
+          Building on my experience with geometry-aware deep learning on real 3D sensor data, my research interests focus on how
+          visual representations can be learned as structured compositions of reusable attributes and relations, rather than as
+          monolithic patterns. I am particularly interested in compositional learning for computer vision as a foundation for
+          robust, data-efficient perception in real-world systems.
         </p>
-
+      
+        <p>
+          My work is motivated by settings where data are limited, observations are noisy or incomplete, and generalization
+          beyond seen configurations is essential. In these contexts, learning explicit structure—such as geometric primitives,
+          spatial relations, and part–whole hierarchies—provides a principled way to improve robustness, interpretability, and
+          transfer.
+        </p>
+      
+        <h3>Current research themes include:</h3>
         <ul>
-          <li><strong>Perception:</strong> learning action-relevant representations from point clouds; robustness under occlusion, noise, and domain shift; sensor fusion (RGB + depth + LiDAR).</li>
-          <li><strong>Learning in the real world:</strong> self-supervised perception; sim-to-real transfer; learning with partial/weak labels.</li>
-          <li><strong>Human–robot interaction:</strong> vision-based intent recognition; safe shared workspaces; multimodal perception (gesture + motion + scene).</li>
-          <li><strong>Embodied multimodal intelligence:</strong> grounding vision/language for robotics; policies conditioned on visual + semantic inputs.</li>
+          <li>
+            <strong>Compositional perception:</strong> learning object representations as combinations of attributes, parts, and
+            relations; geometric structure in 3D point clouds; compositional generalization under distribution shift.
+          </li>
+          <li>
+            <strong>Data-efficient learning:</strong> representation learning under limited supervision; leveraging inductive
+            biases and structured priors to reduce dependence on large labeled datasets.
+          </li>
+          <li>
+            <strong>Robust real-world perception:</strong> handling occlusion, noise, and class imbalance in 3D sensing;
+            diagnosing and mitigating shortcut learning in vision models.
+          </li>
+          <li>
+            <strong>Embodied perception (application context):</strong> using compositional visual representations to support
+            downstream decision-making in embodied and interactive systems.
+          </li>
         </ul>
-
+      
+        <h3>Bridge from applied research:</h3>
         <p>
-          <strong>Bridge experience:</strong> My ORNL work connects directly to these goals: geometry-aware perception from LiDAR point clouds,
-          handling real-world noise and imbalance, and building rigorous evaluation/uncertainty pipelines that matter for downstream action.
+          My work at Oak Ridge National Laboratory directly informs this agenda. There, I developed geometry-aware deep learning
+          models for 3D LiDAR point-cloud semantic segmentation under real-world constraints, including sensor noise, partial
+          observability, and severe class imbalance. This experience highlighted both the strengths and limitations of end-to-end
+          learning, and motivated my focus on structured, attribute-based representations and rigorous evaluation pipelines that
+          matter beyond benchmark performance.
         </p>
       </section>
 
